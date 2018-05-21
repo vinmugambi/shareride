@@ -13,6 +13,7 @@
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",
     "bootstrap-vue": "latest",
+    "express": "^4.16.3",
     "firebase": "^5.0.3",
     "popper.js": "^1.12.9",
     "vee-validate": "^2.0.9",
@@ -44,7 +45,6 @@
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.1",
     "eventsource-polyfill": "^0.9.6",
-    "express": "^4.16.3",
     "extract-text-webpack-plugin": "^2.0.0",
     "file-loader": "^0.11.1",
     "friendly-errors-webpack-plugin": "^1.1.3",
