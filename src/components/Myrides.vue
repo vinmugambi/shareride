@@ -46,7 +46,7 @@
 
 <script>
 import Myride from "./Myride";
-import Ride from "./Ride";
+import Ride from "./Rides";
 import Subscribed from "./Subscribed";
 
 export default {
