@@ -136,7 +136,8 @@
                     <spinner class="my-4"
                              message="Loading ..." />
                 </span>
-                <b-alert v-if="haserr" show
+                <b-alert v-if="haserr"
+                         show
                          variant="danger">
                     {{err}}
                 </b-alert>
@@ -177,7 +178,15 @@ export default {
                 this.emailregister,
                 this.passwordregister
               )
-              .then(user => this.$router.replace("/login"))
+              .then(user => {
+                firebase
+                  .auth()
+                  .signOut()
+                  .then(() => {
+                    this.$router.replace("/login");
+                  })
+                  .catch(err => alert(err.message));
+              })
               .catch(err => {
                 this.haserr = true;
                 this.err = err.message;
@@ -200,7 +209,7 @@ export default {
 #register .card-footer {
   border-top: none;
 }
-.alert{
-    border-radius: 0px;
+.alert {
+  border-radius: 0px;
 }
 </style>
