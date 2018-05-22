@@ -110,6 +110,8 @@ import Myrides from "../Myrides.vue";
 
 export default {
   components: { Myrides },
+  mounted() {
+  },
   data: function() {
     return {
       activeitem: 0,
