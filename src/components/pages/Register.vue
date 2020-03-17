@@ -179,11 +179,10 @@ export default {
                 this.passwordregister
               )
               .then(user => {
-                firebase
-                  .auth()
-                  .signOut()
+                user
+                  .sendEmailVerification()
                   .then(() => {
-                    this.$router.replace("/login");
+                    this.$router.replace("/verifyemail");
                   })
                   .catch(err => alert(err.message));
               })
